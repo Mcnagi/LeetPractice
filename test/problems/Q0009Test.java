@@ -25,13 +25,13 @@ Given an integer x, return true if x is a palindrome , and false otherwise.
         Follow up: Could you solve it without converting the integer to a string?
 
  */
-public class Q009Test {
+public class Q0009Test {
     private void testTrue(int input) {
-        var q9 = new Q009PalindromeNumber();
+        var q9 = new Q0009PalindromeNumber();
         Assertions.assertTrue(q9.isPalindrome(input));
     }
     private void testFalse(int input) {
-        var q9 = new Q009PalindromeNumber();
+        var q9 = new Q0009PalindromeNumber();
         Assertions.assertFalse(q9.isPalindrome(input));
     }
 

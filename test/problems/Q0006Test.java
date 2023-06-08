@@ -35,11 +35,11 @@ s consists of English letters (lower-case and upper-case), ',' and '.'.
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class Q006Test {
+public class Q0006Test {
 
     @Test
     public void testOneRow() {
-        var q6 = new Q006ZigzagConversion();
+        var q6 = new Q0006ZigzagConversion();
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < 52; i++) {
             char next = (char) ('A' + i);
@@ -51,7 +51,7 @@ public class Q006Test {
     }
     @Test
     public void testTwoRows() {
-        var q6 = new Q006ZigzagConversion();
+        var q6 = new Q0006ZigzagConversion();
         String[] tests = new String[] {
                 "abcdefg",
                 "321123",
@@ -74,7 +74,7 @@ public class Q006Test {
     }
     @Test
     public void testThreeRows() {
-        var q6 = new Q006ZigzagConversion();
+        var q6 = new Q0006ZigzagConversion();
         String[] tests = new String[] {
                 "PAYPALISHIRING",
                 "ABCDEFG",
@@ -95,7 +95,7 @@ public class Q006Test {
     }
     @Test
     public void testFourRows() {
-        var q6 = new Q006ZigzagConversion();
+        var q6 = new Q0006ZigzagConversion();
         String[] tests = new String[] {
                 "PAYPALISHIRING",
                 "abcdefghIJKL"
@@ -111,7 +111,7 @@ public class Q006Test {
 
     @Test
     public void testOneColumn() {
-        var q6 = new Q006ZigzagConversion();
+        var q6 = new Q0006ZigzagConversion();
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < 50; i++) {
             builder.append((char)('a' + i));

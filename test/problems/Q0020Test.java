@@ -3,14 +3,14 @@ package problems;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class Q020Test {
+public class Q0020Test {
 
     public void testTrue(String s) {
-        var q20 = new Q020ValidParentheses();
+        var q20 = new Q0020ValidParentheses();
         Assertions.assertTrue(q20.isValid(s));
     }
     public void testFalse(String s) {
-        var q20 = new Q020ValidParentheses();
+        var q20 = new Q0020ValidParentheses();
         Assertions.assertFalse(q20.isValid(s));
     }
 

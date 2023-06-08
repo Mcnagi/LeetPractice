@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Q006ZigzagConversion {
+public class Q0006ZigzagConversion {
 
     public String convert(String s, int numRows) {
         if (numRows < 1) throw new IllegalArgumentException();

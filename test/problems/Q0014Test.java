@@ -23,9 +23,9 @@ Constraints:
     0 <= strs[i].length <= 200
     strs[i] consists of only lowercase English letters.
  */
-public class Q014Test {
+public class Q0014Test {
     public void test(String expected, String[] input) {
-        var q14 = new Q014LongestCommonPrefix();
+        var q14 = new Q0014LongestCommonPrefix();
         Assertions.assertEquals(expected, q14.longestCommonPrefix(input));
     }
 

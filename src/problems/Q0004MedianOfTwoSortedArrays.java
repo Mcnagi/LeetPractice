@@ -1,6 +1,6 @@
 package problems;
 
-public class Q004MedianOfTwoSortedArrays {
+public class Q0004MedianOfTwoSortedArrays {
 
     /**
      * Get the value from the array that

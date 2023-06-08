@@ -21,10 +21,10 @@ Output: 21
 
 Constraints: -231 <= x <= 231 - 1
  */
-public class Q007Test {
+public class Q0007Test {
 
     public void test(int expected, int input) {
-        var q7 = new Q007ReverseInteger();
+        var q7 = new Q0007ReverseInteger();
         Assertions.assertEquals(expected, q7.reverse(input));
     }
 

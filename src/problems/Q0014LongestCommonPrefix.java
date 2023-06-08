@@ -1,6 +1,6 @@
 package problems;
 
-public class Q014LongestCommonPrefix {
+public class Q0014LongestCommonPrefix {
     public String longestCommonPrefix(String[] strs) {
         if (strs.length == 1) return strs[0];
         StringBuilder builder = new StringBuilder();

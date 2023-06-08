@@ -46,10 +46,10 @@ Roman numerals are represented by seven different symbols: I, V, X, L, C, D and 
         It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 
 */
-public class Q013Test {
+public class Q0013Test {
 
     public void test(int expected, String s) {
-        var q13 = new Q013RomanToInteger();
+        var q13 = new Q0013RomanToInteger();
         Assertions.assertEquals(expected, q13.romanToInt(s));
     }
 

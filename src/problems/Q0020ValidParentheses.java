@@ -1,6 +1,6 @@
 package problems;
 
-public class Q020ValidParentheses {
+public class Q0020ValidParentheses {
     public boolean isValid(String s) {
         int n = s.length();
         if (n % 2 == 1) return false;

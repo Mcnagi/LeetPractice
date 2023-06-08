@@ -1,6 +1,6 @@
 package problems;
 
-public class Q007ReverseInteger {
+public class Q0007ReverseInteger {
 
     public int reverse(int x) {
         if (x == 0) return 0;
