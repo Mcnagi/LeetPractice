@@ -5,8 +5,9 @@
 //
 //    public void test(int expected, int input) {
 //        var q = new Q0();
-//        Assertions.assertEquals(expected, q.solution(input),
-//                String.format("Expect to have %s with input: %s", expected, input));
+//        var actual = q(input);
+//        Assertions.assertEquals(expected, actual,
+//                String.format("Expect to have %s but got %s with input: %s", expected, actual, input));
 //    }
 //
 //    @Test
