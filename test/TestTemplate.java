@@ -4,7 +4,7 @@
 //public class TestTemplate {
 //
 //    public void test(int expected, int input) {
-//        var q = new q();
+//        var q = new Q0();
 //        Assertions.assertEquals(expected, q.solution(input),
 //                String.format("Expect to have %s with input: %s", expected, input));
 //    }
