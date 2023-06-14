@@ -54,4 +54,6 @@ public class Q0004Test {
     }
 
 
+    public static class Q0394Test {
+    }
 }

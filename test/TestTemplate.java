@@ -1,7 +1,7 @@
 //import org.junit.jupiter.api.Assertions;
 //import org.junit.jupiter.api.Test;
 //
-//public class TestTemplate {
+
 //
 //    public void test(int expected, int input) {
 //        var q = new Q0();
