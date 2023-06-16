@@ -13,7 +13,7 @@ public class Q0739DailyTemperatures {
                     if (temperatures[i] < temperatures[j]) {
                         result[i] = j - i;
                         break;
-                    }
+                    } else if (result[j] == 0) break;
                     j ++;
                 }
             }
