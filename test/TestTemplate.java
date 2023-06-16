@@ -1,8 +1,5 @@
 //import org.junit.jupiter.api.Assertions;
 //import org.junit.jupiter.api.Test;
-//
-
-//
 //    public void test(int expected, int input) {
 //        var q = new Q0();
 //        var actual = q(input);
