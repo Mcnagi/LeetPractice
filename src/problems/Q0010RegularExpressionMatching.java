@@ -1,27 +1,42 @@
-package problems;
-
-public class Q0010RegularExpressionMatching {
-    public boolean isMatch(String s, String p) {
-        return matchHelper(s, p , 0, 0);
-    }
-
-    public boolean matchHelper(String s, String p, int indexS, int indexP) {
-        if (indexS == s.length()) {
-            if (indexP < p.length()
-                    && (p.charAt(indexP) != '*'
-                    || (p.charAt(indexP) == '*' && indexP + 1 < p.length()))) return false;
-            else return true;
-        } else if (indexP == p.length()) return false;
-
-        char pattern = p.charAt(indexP);
-        char c = s.charAt(indexS);
-        if (pattern == '.' || pattern == c) {
-            return matchHelper(s, p ,indexS + 1, indexP + 1);
-        } else if (pattern == '*') {
-            char prevPattern = p.charAt(indexP - 1);
-            if (prevPattern == '.' || prevPattern == c) return matchHelper(s, p, indexS + 1, indexP);
-            else return matchHelper(s, p, indexS, indexP + 1);
-        }
-        return false;
-    }
-}
+//package problems;
+//
+//import java.util.ArrayList;
+//import java.util.List;
+//
+//public class Q0010RegularExpressionMatching {
+//    List<Group> groups = new ArrayList<>();
+//    public boolean isMatch(String s, String p) {
+//        int indexP = p.length() - 1;
+//        int indexS = s.length() - 1;
+//        while (indexS >= 0 && indexP >= 0) {
+//            if (p.charAt(indexP) == '*') {
+//                Character c = p.charAt(indexP - 1);
+//                if (indexP - 2 > 0 && )
+//            }
+//        }
+//
+//        return true;
+//    }
+//    public void grouping(String pattern) {
+//        int index = 0;
+//        while (index < pattern.length()) {
+//            char c = pattern.charAt(index);
+//           if (index + 1 < pattern.length()) {
+//               if (pattern.charAt(index + 1) == '*') {
+//                   if ()
+//               } else if () {
+//
+//               } else groups.add(new Group(1, c));
+//           }
+//        }
+//    }
+//
+//    public class Group {
+//        int required; // 0: 0 or more, -1: 1 or more
+//        Character c;
+//        public Group(int required, Character c) {
+//            this.required = required;
+//            this.c = c;
+//        }
+//    }
+//}

@@ -40,6 +40,14 @@ public class Q0010Test {
             testFalse(ss[i], patternsFalse[i]);
             testFalse(ss[i], "z");
         }
+        testTrue("aab", "c*a*b");
+        testTrue("ccc", "cc*");
+
+        testFalse("ab", ".*c");
+        testTrue("abc", ".*c");
+        testTrue("abcabc", ".*c");
+        testFalse("abcab", ".*c");
+
     }
     @Test
     public void testLong() {
