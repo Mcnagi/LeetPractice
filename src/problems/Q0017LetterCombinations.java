@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class Q0017LetterCombinationsOfAPhoneNumber {
+public class Q0017LetterCombinations {
     public List<String> letterCombinations(String digits) {
         if (digits.length() == 0) return new ArrayList<>();
         List<String> result = new ArrayList<>();

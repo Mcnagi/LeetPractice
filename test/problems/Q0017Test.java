@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class Q0017Test {
     public void test(Set<String> expected, String input) {
-        var q = new Q0017LetterCombinationsOfAPhoneNumber();
+        var q = new Q0017LetterCombinations();
         var actual = q.letterCombinations(input);
         if (actual == null) actual = new ArrayList<>(List.of("!"));
         Assertions.assertTrue(expected.containsAll(actual)

@@ -3,7 +3,7 @@ package problems;
 /**
  * @author user.name
  */
-public class Q0005LongestPalindromicSubstring {
+public class Q0005LongestPalindromic {
     public String longestPalindrome(String s) {
         String result = "";
         for (int i = 0; i < s.length(); i++) {

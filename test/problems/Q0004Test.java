@@ -7,11 +7,11 @@ import org.junit.jupiter.api.Test;
 public class Q0004Test {
 
     public void testDouble(double expected, int[] array1, int[] array2) {
-        Assertions.assertTrue(Math.abs(Q0004MedianOfTwoSortedArrays.
+        Assertions.assertTrue(Math.abs(Q0004MedianOfTwoSorted.
                 findMedianSortedArrays(array1, array2) - expected) < 0.0001);
     }
     public void testFind(int expected, int target, int[] array) { // fromLeft == 1 means smaller or equal to
-        Assertions.assertEquals(expected, Q0004MedianOfTwoSortedArrays.
+        Assertions.assertEquals(expected, Q0004MedianOfTwoSorted.
                 approximate(target, array, true));
     }
 

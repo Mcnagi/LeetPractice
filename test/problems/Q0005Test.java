@@ -10,7 +10,7 @@ import java.util.Set;
  */
 public class Q0005Test {
     public void test(String input, Set<String> output) {
-        var tmp = new Q0005LongestPalindromicSubstring();
+        var tmp = new Q0005LongestPalindromic();
         var actual = tmp.longestPalindrome(input);
         Assertions.assertTrue(output.contains(actual),
                 "Output: \"" + actual + "\" is not the longest, with Input: " + input );
