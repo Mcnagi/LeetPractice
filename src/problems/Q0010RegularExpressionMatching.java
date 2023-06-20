@@ -1,42 +1,45 @@
-//package problems;
-//
-//import java.util.ArrayList;
-//import java.util.List;
-//
-//public class Q0010RegularExpressionMatching {
-//    List<Group> groups = new ArrayList<>();
-//    public boolean isMatch(String s, String p) {
-//        int indexP = p.length() - 1;
-//        int indexS = s.length() - 1;
-//        while (indexS >= 0 && indexP >= 0) {
-//            if (p.charAt(indexP) == '*') {
-//                Character c = p.charAt(indexP - 1);
-//                if (indexP - 2 > 0 && )
-//            }
-//        }
-//
-//        return true;
-//    }
-//    public void grouping(String pattern) {
-//        int index = 0;
-//        while (index < pattern.length()) {
-//            char c = pattern.charAt(index);
-//           if (index + 1 < pattern.length()) {
-//               if (pattern.charAt(index + 1) == '*') {
-//                   if ()
-//               } else if () {
-//
-//               } else groups.add(new Group(1, c));
-//           }
-//        }
-//    }
-//
-//    public class Group {
-//        int required; // 0: 0 or more, -1: 1 or more
-//        Character c;
-//        public Group(int required, Character c) {
-//            this.required = required;
-//            this.c = c;
-//        }
-//    }
-//}
+package problems;
+
+import javax.swing.plaf.SliderUI;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Q0010RegularExpressionMatching {
+
+    char prevPChar = ' ';
+    int offset = 1;
+    int sLength;
+    public boolean isMatch(String s, String p) {
+        sLength = s.length();
+        return isMatch(s, 0, p, 0);
+    }
+
+    public boolean isMatch(String s, int sIndex, String p, int pIndex) {
+        if (sIndex == sLength) {
+            if (pIndex == p.length()) return true;
+            else if (p.charAt(pIndex) == '*') {
+                return isMatch(s, sIndex, p, pIndex + 1);
+            } else if (pIndex + 1 < p.length()) {
+                if (p.charAt(pIndex + 1) == '*') return isMatch(s, sIndex, p, pIndex + 2);
+                return false;
+            }
+            return false;
+
+        } else if (pIndex == p.length()) return false;
+
+        char sChar = s.charAt(sIndex);
+        char pChar = p.charAt(pIndex);
+        if (sChar == pChar || pChar == '.') {
+            prevPChar = pChar;
+            return isMatch(s, sIndex + 1, p, pIndex + 1);
+        } else if (pChar == '*'
+                && (sChar == prevPChar || prevPChar == '.')) {
+            for (; offset < sLength - sIndex; offset++) {
+                if (isMatch(s, sIndex + offset, p, pIndex + 1)) return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
+}

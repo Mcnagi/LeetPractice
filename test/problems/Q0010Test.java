@@ -24,7 +24,7 @@ public class Q0010Test {
         for (int i = 0; i < 26; i++)
             testTrue(String.valueOf((char)('a' + i)), ".");
         for (int i = 0; i < 26; i++)
-            testFalse(String.valueOf((char)('a' + i)), String.valueOf('a' + (i  + 1 ) % 26));
+            testFalse(String.valueOf((char)('a' + i)), String.valueOf((char)('a' + (i  + 1 ) % 26)));
     }
 
     @Test
