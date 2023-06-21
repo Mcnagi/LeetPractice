@@ -5,43 +5,32 @@ import java.util.Stack;
 public class Q0232QueueStacks {
     Stack<Integer> in = new Stack<>();
     Stack<Integer> out = new Stack<>();
-
+    int size = 0;
 //    public MyQueue() {
 //
 //    }
 
     public void push(int x) {
         in.push(x);
+        size += 1;
     }
 
     public int pop() {
-        int tmp = 0;
-        while (!in.isEmpty()) {
-            tmp = in.pop();
-            out.push(tmp);
+        if (out.isEmpty()) {
+            while (!in.isEmpty()) out.push(in.pop());
         }
-        out.pop();
-        while (!out.isEmpty()) {
-            int tmp2 = out.pop();
-            in.push(tmp2);
-        }
-        return tmp;
+        size -= 1;
+        return out.pop();
     }
 
     public int peek() {
-        int tmp = 0;
-        while (!in.isEmpty()) {
-            tmp = in.pop();
-            out.push(tmp);
+        if (out.isEmpty()) {
+            while (!in.isEmpty()) out.push(in.pop());
         }
-        while (!out.isEmpty()) {
-            int tmp2 = out.pop();
-            in.push(tmp2);
-        }
-        return tmp;
+        return out.peek();
     }
 
     public boolean empty() {
-        return in.isEmpty();
+        return size == 0;
     }
 }
