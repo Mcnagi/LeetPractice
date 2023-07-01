@@ -5,6 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 
+//    1 <= s.length <= 5 * 104
+//            t.length == s.length
+//            s and t consist of any valid ascii character.
+
 public class Q0205Test {
     public void testTrue(String input, String input2) {
         var q = new Q0205IsomorphicStrings();
@@ -13,6 +17,7 @@ public class Q0205Test {
                 String.format("Expect to be true but got %s with input: %s",
                         actual, input + ", " + input2));
     }
+
     public void testFalse(String input, String input2) {
         var q = new Q0205IsomorphicStrings();
         var actual = q.isIsomorphic(input, input2);
@@ -25,11 +30,11 @@ public class Q0205Test {
     public void testOne() {
         Random rand = new Random();
         for (int i = 0; i < 26; i++) {
-            testTrue(String.valueOf((char)('a' + i)), "a");
-            testTrue(String.valueOf((char)('a' + i)),
-                    String.valueOf((char)('a' + (i + rand.nextInt()) % 26 )));
+            testTrue(String.valueOf((char) ('a' + i)), "a");
+            testTrue(String.valueOf((char) ('a' + i)),
+                    String.valueOf((char) ('a' + (i + rand.nextInt()) % 26)));
 
-            testFalse(String.valueOf((char)('a' + i)), "ab");
+            testFalse(String.valueOf((char) ('a' + i)), "ab");
         }
     }
 
