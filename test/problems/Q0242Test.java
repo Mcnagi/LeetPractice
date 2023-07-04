@@ -36,7 +36,7 @@ public class Q0242Test {
     public void testHard() {
         testFalse("abcdefghijklmn", "abcdefghijklmno");
         List<String> testCase = new ArrayList<>();
-        try (var reader = new BufferedReader(new FileReader("./test/Q0242TrueTestCase.txt"))) {
+        try (var reader = new BufferedReader(new FileReader("./test/problems/Q0242TrueTestCase.txt"))) {
             while (true) {
                 var line = reader.readLine();
                 if (line == null) break;
