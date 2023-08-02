@@ -13,5 +13,14 @@ public class playground {
 //        System.out.println(c > null);
         char[] chars = new char[10];
         System.out.println();
+
+        int[][] grid = new int[][]{
+                {1, 2, 3, 4, 5},
+                {6, 7, 8, 9, 10},
+                {11, 12, 13, 14, 15}
+        };
+        System.out.println("grid.length: " + grid.length);
+        System.out.println("grid[0].length: " + grid[0].length);
+        System.out.println("grid[0][3]: " + grid[0][3]);
     }
 }
