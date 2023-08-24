@@ -64,5 +64,8 @@ public class Q0010Test {
             testFalse(ss[i], patternsFalse1[i]);
             testFalse(ss[i], patternsFalse2[i]);
         }
+        testTrue("ca", ".*ab*");
+        testFalse("caac", ".*ab*");
+        testTrue("caaca", ".*ab*");
     }
 }
