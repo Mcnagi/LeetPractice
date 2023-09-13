@@ -1,0 +1,57 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red70\green137\blue204;\red255\green255\blue255;\red202\green202\blue202;
+\red67\green192\blue160;\red212\green214\blue154;\red167\green197\blue152;\red194\green126\blue101;}
+{\*\expandedcolortbl;;\cssrgb\c33725\c61176\c83922;\cssrgb\c100000\c100000\c100000\c7059;\cssrgb\c83137\c83137\c83137;
+\cssrgb\c30588\c78824\c69020;\cssrgb\c86275\c86275\c66667;\cssrgb\c70980\c80784\c65882;\cssrgb\c80784\c56863\c47059;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+class\cf4  \cf5 Solution\cf4  \{\
+    \cf2 public\cf4  \cf2 boolean\cf4  \cf6 isMatch\cf4 (\cf5 String\cf4  s, \cf5 String\cf4  p)\{\
+        \cf2 boolean\cf4  count[][] = \cf2 new\cf4  \cf2 boolean\cf4 [\cf7 2\cf4 ][s.\cf6 length\cf4 () + \cf7 1\cf4 ];\
+        count[\cf7 0\cf4 ][\cf7 0\cf4 ] = \cf2 true\cf4 ;\
+        \cf2 int\cf4  index = \cf7 0\cf4 ;\
+        \cf2 while\cf4 (index < p.\cf6 length\cf4 ())\{\
+        count[\cf7 1\cf4 ] = \cf2 new\cf4  \cf2 boolean\cf4 [s.\cf6 length\cf4 () + \cf7 1\cf4 ];\
+            \cf2 char\cf4  rep_char;\
+            \cf2 boolean\cf4  star = \cf2 false\cf4 ;\
+            \cf2 if\cf4 (index + \cf7 1\cf4  < p.\cf6 length\cf4 () && p.\cf6 charAt\cf4 (index + \cf7 1\cf4 ) == \cf8 '*'\cf4 )\{\
+             star = \cf2 true\cf4 ;\
+            \}\
+            \cf2 if\cf4 (count[\cf7 0\cf4 ][\cf7 0\cf4 ] && star)\{\
+            count[\cf7 1\cf4 ][\cf7 0\cf4 ] = \cf2 true\cf4 ;\
+            \}\
+            rep_char = p.\cf6 charAt\cf4 (index);\
+            \cf2 for\cf4 (\cf2 int\cf4  i = \cf7 0\cf4 ; i < s.\cf6 length\cf4 () ; i++)\{\
+                \cf2 if\cf4 (star)\{\
+                    \cf2 if\cf4 (count[\cf7 0\cf4 ][i + \cf7 1\cf4 ])\{\
+                        count[\cf7 1\cf4 ][i + \cf7 1\cf4 ] = \cf2 true\cf4 ;\
+                    \}\
+                    \cf2 if\cf4 (count[\cf7 0\cf4 ][i] || count[\cf7 1\cf4 ][i])\{\
+                        \cf2 if\cf4 (rep_char == \cf8 '.'\cf4  || rep_char == s.\cf6 charAt\cf4 (i))\{\
+                            count[\cf7 1\cf4 ][i + \cf7 1\cf4 ] = \cf2 true\cf4 ;\
+                        \}\
+                    \}\
+                \}\
+                \cf2 else\cf4 \{\
+                    \cf2 if\cf4 (count[\cf7 0\cf4 ][i])\{\
+                        \cf2 if\cf4 (rep_char == \cf8 '.'\cf4  || rep_char == s.\cf6 charAt\cf4 (i))\{\
+                            count[\cf7 1\cf4 ][i + \cf7 1\cf4 ] = \cf2 true\cf4 ;\
+                        \}\
+                    \}\
+                \}\
+            \}\
+            \cf2 if\cf4 (star)\{\
+                index += \cf7 2\cf4 ;\
+            \}\
+            \cf2 else\cf4 \{\
+                index++;\
+            \}\
+            count[\cf7 0\cf4 ] = count[\cf7 1\cf4 ];\
+        \}\
+        \cf2 return\cf4  count[\cf7 0\cf4 ][s.\cf6 length\cf4 ()];\
+    \}\
+\}}
