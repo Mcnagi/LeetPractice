@@ -23,38 +23,38 @@ Constraints: -231 <= x <= 231 - 1
  */
 public class Q0007Test {
 
-    public void test(int expected, int input) {
-        var q7 = new Q0007ReverseInteger();
-        Assertions.assertEquals(expected, q7.reverse(input));
-    }
+  public void test(int expected, int input) {
+    var q7 = new Q0007ReverseInteger();
+    Assertions.assertEquals(expected, q7.reverse(input));
+  }
 
-    @Test
-    public void testTrivial() {
-        for (int i = 0; i < 10; i++) {
-            test(i,i);
-        }
+  @Test
+  public void testTrivial() {
+    for (int i = 0; i < 10; i++) {
+      test(i, i);
     }
-    @Test
-    public void testShort() {
-        int[] tests = new int[] {123, 11, -11, 112, -12, 91, 19, -19};
-        int[] answers = new int[] {321, 11, -11, 211, -21, 19, 91, -91};
-        for (int i = 0; i < tests.length; i++) {
-            test(answers[i], tests[i]);
-        }
-        tests = new int[] {1254, 4356, 571, 175, -1759, -9040};
-        answers = new int[] {4521, 6534, 175, 571, -9571, -409};
-        for (int i = 0; i < tests.length; i++) {
-            test(answers[i], tests[i]);
-        }
-    }
+  }
 
-    @Test
-    public void testLong() {
-        int[] tests = new int[] {2_147_483_647, -2_147_483_647, -2_147_483_648, 2147483, 2_100_000_000};
-        int[] answers = new int[] {0, 0, 0,  3847412, 12};
-        for (int i = 0; i < tests.length; i++) {
-            test(answers[i], tests[i]);
-        }
+  @Test
+  public void testShort() {
+    int[] tests = new int[] {123, 11, -11, 112, -12, 91, 19, -19};
+    int[] answers = new int[] {321, 11, -11, 211, -21, 19, 91, -91};
+    for (int i = 0; i < tests.length; i++) {
+      test(answers[i], tests[i]);
     }
+    tests = new int[] {1254, 4356, 571, 175, -1759, -9040};
+    answers = new int[] {4521, 6534, 175, 571, -9571, -409};
+    for (int i = 0; i < tests.length; i++) {
+      test(answers[i], tests[i]);
+    }
+  }
 
+  @Test
+  public void testLong() {
+    int[] tests = new int[] {2_147_483_647, -2_147_483_647, -2_147_483_648, 2147483, 2_100_000_000};
+    int[] answers = new int[] {0, 0, 0, 3847412, 12};
+    for (int i = 0; i < tests.length; i++) {
+      test(answers[i], tests[i]);
+    }
+  }
 }

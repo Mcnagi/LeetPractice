@@ -24,39 +24,39 @@ Constraints:
     strs[i] consists of only lowercase English letters.
  */
 public class Q0014Test {
-    public void test(String expected, String[] input) {
-        var q14 = new Q0014LongestCommonPrefix();
-        Assertions.assertEquals(expected, q14.longestCommonPrefix(input));
-    }
+  public void test(String expected, String[] input) {
+    var q14 = new Q0014LongestCommonPrefix();
+    Assertions.assertEquals(expected, q14.longestCommonPrefix(input));
+  }
 
-    @Test
-    public void testEmpty() {
-        String[][] inputs = new String[][] {
-                new String[]{"", "", ""},
-                new String[]{"", "1", "2"},
-                new String[]{"a", "", "acb"},
-                new String[]{"a", "b", "acb"},
-                new String[]{"dog","racecar","car"}
+  @Test
+  public void testEmpty() {
+    String[][] inputs =
+        new String[][] {
+          new String[] {"", "", ""},
+          new String[] {"", "1", "2"},
+          new String[] {"a", "", "acb"},
+          new String[] {"a", "b", "acb"},
+          new String[] {"dog", "racecar", "car"}
         };
-        for (int i = 0; i < inputs.length; i++) {
-            test("", inputs[i]);
-        }
+    for (int i = 0; i < inputs.length; i++) {
+      test("", inputs[i]);
     }
+  }
 
-    @Test
-    public void testShort() {
-        String[][] inputs = new String[][] {
-                new String[]{"a", "a", "a"},
-                new String[]{"a", "a1", "a2a"},
-                new String[]{"aca", "aaa", "acb"},
-                new String[]{"ac", "ac1", "acb"},
-                new String[]{"dog","dogOfTheYear","dogAndCat"}
+  @Test
+  public void testShort() {
+    String[][] inputs =
+        new String[][] {
+          new String[] {"a", "a", "a"},
+          new String[] {"a", "a1", "a2a"},
+          new String[] {"aca", "aaa", "acb"},
+          new String[] {"ac", "ac1", "acb"},
+          new String[] {"dog", "dogOfTheYear", "dogAndCat"}
         };
-        String[] answers = new String[]{
-                "a", "a", "a", "ac", "dog"
-        };
-        for (int i = 0; i < inputs.length; i++) {
-            test(answers[i], inputs[i]);
-        }
+    String[] answers = new String[] {"a", "a", "a", "ac", "dog"};
+    for (int i = 0; i < inputs.length; i++) {
+      test(answers[i], inputs[i]);
     }
+  }
 }

@@ -26,45 +26,47 @@ Given an integer x, return true if x is a palindrome , and false otherwise.
 
  */
 public class Q0009Test {
-    private void testTrue(int input) {
-        var q9 = new Q0009PalindromeNumber();
-        Assertions.assertTrue(q9.isPalindrome(input));
+  private void testTrue(int input) {
+    var q9 = new Q0009PalindromeNumber();
+    Assertions.assertTrue(q9.isPalindrome(input));
+  }
+
+  private void testFalse(int input) {
+    var q9 = new Q0009PalindromeNumber();
+    Assertions.assertFalse(q9.isPalindrome(input));
+  }
+
+  @Test
+  public void testSmall() {
+    // test one digit
+    for (int i = 0; i < 10; i++) {
+      testTrue(i);
     }
-    private void testFalse(int input) {
-        var q9 = new Q0009PalindromeNumber();
-        Assertions.assertFalse(q9.isPalindrome(input));
+    // test palindrome
+    int[] inputTrue = new int[] {121, 11, 99, 929, 505, 111, 737, 373};
+    for (int input : inputTrue) {
+      testTrue(input);
     }
 
-    @Test
-    public void testSmall() {
-        // test one digit
-        for (int i = 0; i < 10; i++) {
-            testTrue(i);
-        }
-        // test palindrome
-        int[] inputTrue = new int[] {121, 11, 99, 929, 505, 111, 737, 373};
-        for (int input : inputTrue) {
-            testTrue(input);
-        }
-
-        // test false
-        int[] inputFalse = new int[] {-121, 10, 500, 908, -1, 34};
-        for (int input : inputFalse) {
-            testFalse(input);
-        }
+    // test false
+    int[] inputFalse = new int[] {-121, 10, 500, 908, -1, 34};
+    for (int input : inputFalse) {
+      testFalse(input);
     }
-    @Test
-    public void testMedium() {
-        // test palindrome
-        int[] inputTrue = new int[] {111111, 1122211, 112211, 10101, 934439};
-        for (int input : inputTrue) {
-            testTrue(input);
-        }
+  }
 
-        // test false
-        int[] inputFalse = new int[] {123456, 189089, 23443, -11111, -1234321, 1000021};
-        for (int input : inputFalse) {
-            testFalse(input);
-        }
+  @Test
+  public void testMedium() {
+    // test palindrome
+    int[] inputTrue = new int[] {111111, 1122211, 112211, 10101, 934439};
+    for (int input : inputTrue) {
+      testTrue(input);
     }
+
+    // test false
+    int[] inputFalse = new int[] {123456, 189089, 23443, -11111, -1234321, 1000021};
+    for (int input : inputFalse) {
+      testFalse(input);
+    }
+  }
 }

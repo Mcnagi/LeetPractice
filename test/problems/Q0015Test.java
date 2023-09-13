@@ -1,14 +1,14 @@
-//package problems;
+// package problems;
 //
-//import org.junit.jupiter.api.Assertions;
-//import org.junit.jupiter.api.Test;
+// import org.junit.jupiter.api.Assertions;
+// import org.junit.jupiter.api.Test;
 //
-//import java.util.ArrayList;
-//import java.util.HashSet;
-//import java.util.List;
-//import java.util.Set;
+// import java.util.ArrayList;
+// import java.util.HashSet;
+// import java.util.List;
+// import java.util.Set;
 //
-//public class Q0015Test {
+// public class Q0015Test {
 //    public boolean testList(Set<List<Integer>> expected, List<List<Integer>> result) {
 //        if (expected.size() != result.size()) return false;
 //
@@ -54,4 +54,4 @@
 //    public void testHard() {
 //
 //    }
-//}
+// }

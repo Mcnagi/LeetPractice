@@ -37,99 +37,71 @@ import org.junit.jupiter.api.Test;
 
 public class Q0006Test {
 
-    @Test
-    public void testOneRow() {
-        var q6 = new Q0006ZigzagConversion();
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < 52; i++) {
-            char next = (char) ('A' + i);
-            Assertions.assertEquals(String.valueOf(next), q6.convert(String.valueOf(next), 1) );
-            builder.append(next);
-            String actual = q6.convert(builder.toString() , 1);
-            Assertions.assertEquals(builder.toString(), actual);
-        }
+  @Test
+  public void testOneRow() {
+    var q6 = new Q0006ZigzagConversion();
+    StringBuilder builder = new StringBuilder();
+    for (int i = 0; i < 52; i++) {
+      char next = (char) ('A' + i);
+      Assertions.assertEquals(String.valueOf(next), q6.convert(String.valueOf(next), 1));
+      builder.append(next);
+      String actual = q6.convert(builder.toString(), 1);
+      Assertions.assertEquals(builder.toString(), actual);
     }
-    @Test
-    public void testTwoRows() {
-        var q6 = new Q0006ZigzagConversion();
-        String[] tests = new String[] {
-                "abcdefg",
-                "321123",
-                "121212",
-                "ABCDEFG",
-                "gfedcba",
-                "1ah3z.2"
-        };
-        String[] answers = new String[] {
-                "acegbdf",
-                "312213",
-                "111222",
-                "ACEGBDF",
-                "gecafdb",
-                "1hz2a3."
-        };
-        for (int i = 0; i < tests.length; i++) {
-            Assertions.assertEquals(answers[i], q6.convert(tests[i], 2));
-        }
+  }
+
+  @Test
+  public void testTwoRows() {
+    var q6 = new Q0006ZigzagConversion();
+    String[] tests = new String[] {"abcdefg", "321123", "121212", "ABCDEFG", "gfedcba", "1ah3z.2"};
+    String[] answers =
+        new String[] {"acegbdf", "312213", "111222", "ACEGBDF", "gecafdb", "1hz2a3."};
+    for (int i = 0; i < tests.length; i++) {
+      Assertions.assertEquals(answers[i], q6.convert(tests[i], 2));
     }
-    @Test
-    public void testThreeRows() {
-        var q6 = new Q0006ZigzagConversion();
-        String[] tests = new String[] {
-                "PAYPALISHIRING",
-                "ABCDEFG",
-                "abcdefg",
-                "15C627D839EA4BF"
+  }
 
-        };
-        String[] answers = new String[] {
-                "PAHNAPLSIIGYIR",
-                "AEBDFCG",
-                "aebdfcg",
-                "123456789ABCDEF"
+  @Test
+  public void testThreeRows() {
+    var q6 = new Q0006ZigzagConversion();
+    String[] tests = new String[] {"PAYPALISHIRING", "ABCDEFG", "abcdefg", "15C627D839EA4BF"};
 
-        };
-        for (int i = 0; i < tests.length; i++) {
-            Assertions.assertEquals(answers[i], q6.convert(tests[i], 3));
-        }
+    String[] answers = new String[] {"PAHNAPLSIIGYIR", "AEBDFCG", "aebdfcg", "123456789ABCDEF"};
+
+    for (int i = 0; i < tests.length; i++) {
+      Assertions.assertEquals(answers[i], q6.convert(tests[i], 3));
     }
-    @Test
-    public void testFourRows() {
-        var q6 = new Q0006ZigzagConversion();
-        String[] tests = new String[] {
-                "PAYPALISHIRING",
-                "abcdefghIJKL"
-        };
-        String[] answers = new String[] {
-                "PINALSIGYAHRPI",
-                "agbfhLceIKdJ"
-        };
-        for (int i = 0; i < tests.length; i++) {
-            Assertions.assertEquals(answers[i], q6.convert(tests[i], 4));
-        }
+  }
+
+  @Test
+  public void testFourRows() {
+    var q6 = new Q0006ZigzagConversion();
+    String[] tests = new String[] {"PAYPALISHIRING", "abcdefghIJKL"};
+    String[] answers = new String[] {"PINALSIGYAHRPI", "agbfhLceIKdJ"};
+    for (int i = 0; i < tests.length; i++) {
+      Assertions.assertEquals(answers[i], q6.convert(tests[i], 4));
     }
+  }
 
-    @Test
-    public void testOneColumn() {
-        var q6 = new Q0006ZigzagConversion();
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < 50; i++) {
-            builder.append((char)('a' + i));
-            var s = builder.toString();
-            Assertions.assertEquals(s, q6.convert(s, s.length()));
-        }
-
+  @Test
+  public void testOneColumn() {
+    var q6 = new Q0006ZigzagConversion();
+    StringBuilder builder = new StringBuilder();
+    for (int i = 0; i < 50; i++) {
+      builder.append((char) ('a' + i));
+      var s = builder.toString();
+      Assertions.assertEquals(s, q6.convert(s, s.length()));
     }
+  }
 
-    // hahah not a good test case
-//    @Test
-//    public void testTwoColumns() {
-//        var q6 = new Q006ZigzagConversion();
-////        Assertions.assertEquals("aebcd", q6.convert("abcde", 4) );
-//        Assertions.assertEquals("aebfcd", q6.convert("abcdef", 4) );
-//        Assertions.assertEquals("aebfcgd", q6.convert("abcdefg", 4) );
-//        Assertions.assertEquals("aebfcgdh", q6.convert("abcdefgh", 4) );
-//    }
-
+  // hahah not a good test case
+  //    @Test
+  //    public void testTwoColumns() {
+  //        var q6 = new Q006ZigzagConversion();
+  ////        Assertions.assertEquals("aebcd", q6.convert("abcde", 4) );
+  //        Assertions.assertEquals("aebfcd", q6.convert("abcdef", 4) );
+  //        Assertions.assertEquals("aebfcgd", q6.convert("abcdefg", 4) );
+  //        Assertions.assertEquals("aebfcgdh", q6.convert("abcdefgh", 4) );
+  //    }
 
 }

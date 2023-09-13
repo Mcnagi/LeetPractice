@@ -2,6 +2,7 @@ package problems;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 /*
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
         Symbol       Value
@@ -48,35 +49,27 @@ Roman numerals are represented by seven different symbols: I, V, X, L, C, D and 
 */
 public class Q0013Test {
 
-    public void test(int expected, String s) {
-        var q13 = new Q0013RomanToInteger();
-        Assertions.assertEquals(expected, q13.romanToInt(s));
-    }
+  public void test(int expected, String s) {
+    var q13 = new Q0013RomanToInteger();
+    Assertions.assertEquals(expected, q13.romanToInt(s));
+  }
 
-    /**
-     * I             1
-     * V             5
-     * X             10
-     * L             50
-     * C             100
-     * D             500
-     * M             1000
-     */
-    @Test
-    public void testTrivial() {
-        String[] s = new String[] {"I", "V", "X", "L", "C", "D", "M"};
-        int[] answers = new int[] {1, 5,   10,   50 ,  100,  500, 1000};
-        for (int i = 0; i < s.length; i++) {
-            test(answers[i], s[i]);
-        }
+  /** I 1 V 5 X 10 L 50 C 100 D 500 M 1000 */
+  @Test
+  public void testTrivial() {
+    String[] s = new String[] {"I", "V", "X", "L", "C", "D", "M"};
+    int[] answers = new int[] {1, 5, 10, 50, 100, 500, 1000};
+    for (int i = 0; i < s.length; i++) {
+      test(answers[i], s[i]);
+    }
+  }
 
+  @Test
+  public void testCombo() {
+    String[] s = new String[] {"III", "IV", "VI", "LVIII", "MCMXCIV"};
+    int[] answers = new int[] {3, 4, 6, 58, 1994};
+    for (int i = 0; i < s.length; i++) {
+      test(answers[i], s[i]);
     }
-    @Test
-    public void testCombo() {
-        String[] s = new String[] {"III", "IV", "VI", "LVIII", "MCMXCIV"};
-        int[] answers = new int[] {3, 4, 6, 58, 1994};
-        for (int i = 0; i < s.length; i++) {
-            test(answers[i], s[i]);
-        }
-    }
+  }
 }

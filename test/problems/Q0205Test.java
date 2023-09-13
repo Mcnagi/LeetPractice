@@ -1,95 +1,96 @@
 package problems;
 
+import java.util.Random;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.Random;
 
 //    1 <= s.length <= 5 * 104
 //            t.length == s.length
 //            s and t consist of any valid ascii character.
 
 public class Q0205Test {
-    public void testTrue(String input, String input2) {
-        var q = new Q0205IsomorphicStrings();
-        var actual = q.isIsomorphic(input, input2);
-        Assertions.assertTrue(actual,
-                String.format("Expect to be true but got %s with input: %s",
-                        actual, input + ", " + input2));
+  public void testTrue(String input, String input2) {
+    var q = new Q0205IsomorphicStrings();
+    var actual = q.isIsomorphic(input, input2);
+    Assertions.assertTrue(
+        actual,
+        String.format(
+            "Expect to be true but got %s with input: %s", actual, input + ", " + input2));
+  }
+
+  public void testFalse(String input, String input2) {
+    var q = new Q0205IsomorphicStrings();
+    var actual = q.isIsomorphic(input, input2);
+    Assertions.assertFalse(
+        actual,
+        String.format(
+            "Expect to be false but got %s with input: %s", actual, input + ", " + input2));
+  }
+
+  @Test
+  public void testOne() {
+    Random rand = new Random();
+    for (int i = 0; i < 26; i++) {
+      testTrue(String.valueOf((char) ('a' + i)), "a");
+      testTrue(
+          String.valueOf((char) ('a' + i)),
+          String.valueOf((char) ('a' + (i + rand.nextInt()) % 26)));
+
+      testFalse(String.valueOf((char) ('a' + i)), "ab");
     }
+  }
 
-    public void testFalse(String input, String input2) {
-        var q = new Q0205IsomorphicStrings();
-        var actual = q.isIsomorphic(input, input2);
-        Assertions.assertFalse(actual,
-                String.format("Expect to be false but got %s with input: %s",
-                        actual, input + ", " + input2));
-    }
+  @Test
+  public void testTwo() {
+    testTrue("ab", "ab");
+    testTrue("ab", "cd");
+    testTrue("ab", "xy");
+    testTrue("xy", "ab");
+    testTrue("xy", "xa");
 
-    @Test
-    public void testOne() {
-        Random rand = new Random();
-        for (int i = 0; i < 26; i++) {
-            testTrue(String.valueOf((char) ('a' + i)), "a");
-            testTrue(String.valueOf((char) ('a' + i)),
-                    String.valueOf((char) ('a' + (i + rand.nextInt()) % 26)));
+    testFalse("xy", "xx");
+    testFalse("xy", "xyz");
+    testFalse("xyz", "xyy");
+    testFalse("xyz", "xy");
+    testFalse("xx", "xy");
+  }
 
-            testFalse(String.valueOf((char) ('a' + i)), "ab");
-        }
-    }
+  @Test
+  public void testHasSame() {
+    testTrue("aa", "aa");
+    testTrue("aa", "bb");
+    testTrue("aa", "xx");
 
-    @Test
-    public void testTwo() {
-        testTrue("ab", "ab");
-        testTrue("ab", "cd");
-        testTrue("ab", "xy");
-        testTrue("xy", "ab");
-        testTrue("xy", "xa");
+    testTrue("aba", "xbx");
+    testTrue("aba", "zcz");
+    testTrue("aab", "xxa");
+    testTrue("aab", "zzb");
+    testTrue("aab", "yyc");
+    testTrue("egg", "add");
 
-        testFalse("xy", "xx");
-        testFalse("xy", "xyz");
-        testFalse("xyz", "xyy");
-        testFalse("xyz", "xy");
-        testFalse("xx", "xy");
-    }
+    testFalse("aa", "ab");
+    testFalse("aa", "aab");
 
-    @Test
-    public void testHasSame() {
-        testTrue("aa", "aa");
-        testTrue("aa", "bb");
-        testTrue("aa", "xx");
+    testFalse("aab", "acb");
+    testFalse("aab", "aa");
+    testFalse("aab", "bbb");
+    testFalse("aab", "aaa");
 
-        testTrue("aba", "xbx");
-        testTrue("aba", "zcz");
-        testTrue("aab", "xxa");
-        testTrue("aab", "zzb");
-        testTrue("aab", "yyc");
-        testTrue("egg", "add");
+    testFalse("aab", "aba");
+    testFalse("aab", "xkx");
+    testFalse("foo", "bar");
+  }
 
-        testFalse("aa", "ab");
-        testFalse("aa", "aab");
+  @Test
+  public void testLong() {
+    testTrue("paper", "title");
+    testTrue("sheep", "spoon");
+    testTrue("dish", "card");
+    testTrue("dish", "rand");
+    testTrue("apple", "addre");
+    testTrue("australia", "bcvnrbmib");
 
-        testFalse("aab", "acb");
-        testFalse("aab", "aa");
-        testFalse("aab", "bbb");
-        testFalse("aab", "aaa");
-
-        testFalse("aab", "aba");
-        testFalse("aab", "xkx");
-        testFalse("foo", "bar");
-    }
-
-    @Test
-    public void testLong() {
-        testTrue("paper", "title");
-        testTrue("sheep", "spoon");
-        testTrue("dish", "card");
-        testTrue("dish", "rand");
-        testTrue("apple", "addre");
-        testTrue("australia", "bcvnrbmib");
-
-
-        testFalse("apple", "eddre");
-        testFalse("paper", "ppaer");
-    }
+    testFalse("apple", "eddre");
+    testFalse("paper", "ppaer");
+  }
 }
