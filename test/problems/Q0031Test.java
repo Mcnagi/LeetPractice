@@ -55,6 +55,6 @@ public class Q0031Test {
     test(new int[] {1, 1, 1, 5}, new int[] {5, 1, 1, 1});
 
     // leetcode test case
-    test(new int[]{2,3,1,2,2,2,4,5,7},  new int[]{2,2,7,5,4,3,2,2,1});
+    test(new int[] {2, 3, 1, 2, 2, 2, 4, 5, 7}, new int[] {2, 2, 7, 5, 4, 3, 2, 2, 1});
   }
 }

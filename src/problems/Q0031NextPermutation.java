@@ -25,7 +25,6 @@ public class Q0031NextPermutation {
       }
     }
     swap(nums, j - 1, index);
-//    sort(nums, j, nums.length - 1);
     Arrays.sort(nums, j, nums.length);
   }
 
