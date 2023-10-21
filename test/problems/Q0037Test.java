@@ -20,6 +20,7 @@ public class Q0037Test {
     for (char[] chars : board) builder.append(Arrays.toString(chars)).append("\n");
     return builder.toString();
   }
+
   @Test
   public void testSimple() {
     var board =
