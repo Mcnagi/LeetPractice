@@ -3,6 +3,7 @@ package problems;
 import java.util.Arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.Q0031_Q0060.Q0031NextPermutation;
 
 public class Q0031Test {
   public void test(int[] expected, int[] input) {

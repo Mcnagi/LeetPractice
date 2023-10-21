@@ -2,6 +2,7 @@ package problems;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.Q0031_Q0060.Q0032LongestValidParentheses;
 
 public class Q0032Test {
   public void test(int expected, String input) {
