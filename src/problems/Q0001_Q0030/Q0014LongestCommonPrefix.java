@@ -1,4 +1,4 @@
-package problems;
+package problems.Q0001_Q0030;
 
 public class Q0014LongestCommonPrefix {
   public String longestCommonPrefix(String[] strs) {

@@ -1,4 +1,4 @@
-package problems;
+package problems.Q0001_Q0030;
 
 public class Q0008StringToInteger {
   public int myAtoi(String s) {

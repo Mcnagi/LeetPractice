@@ -1,4 +1,4 @@
-package problems;
+package problems.Q0001_Q0030;
 
 public class Q0027RemoveElement {
   public int removeElement(int[] nums, int val) {

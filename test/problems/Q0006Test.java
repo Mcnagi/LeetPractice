@@ -34,6 +34,7 @@ s consists of English letters (lower-case and upper-case), ',' and '.'.
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.Q0001_Q0030.Q0006ZigzagConversion;
 
 public class Q0006Test {
 

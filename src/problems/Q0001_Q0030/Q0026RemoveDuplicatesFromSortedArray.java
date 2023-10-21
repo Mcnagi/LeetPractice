@@ -1,7 +1,7 @@
-package problems;
+package problems.Q0001_Q0030;
 
 public class Q0026RemoveDuplicatesFromSortedArray {
-  int[] array;
+  public int[] array;
 
   public Q0026RemoveDuplicatesFromSortedArray(int[] array) {
     this.array = array;

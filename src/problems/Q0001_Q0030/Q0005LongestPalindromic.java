@@ -1,4 +1,4 @@
-package problems;
+package problems.Q0001_Q0030;
 
 /**
  * @author user.name

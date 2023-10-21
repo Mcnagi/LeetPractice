@@ -2,6 +2,7 @@ package problems;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.Q0001_Q0030.Q0029DivideTwoIntegers;
 
 public class Q0029Test {
 

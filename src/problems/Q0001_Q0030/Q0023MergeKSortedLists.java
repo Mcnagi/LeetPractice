@@ -1,4 +1,6 @@
-package problems;
+package problems.Q0001_Q0030;
+
+import problems.ListNode;
 
 import java.util.ArrayList;
 import java.util.Comparator;
