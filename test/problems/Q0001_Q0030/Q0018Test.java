@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import problems.Q0001_Q0030.Q0018FourSum;
 
 public class Q0018Test {
   public void test(List<List<Integer>> expected, int[] array, int target) {

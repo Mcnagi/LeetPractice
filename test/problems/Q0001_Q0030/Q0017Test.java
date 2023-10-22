@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Set;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import problems.Q0001_Q0030.Q0017LetterCombinations;
 
 public class Q0017Test {
   public void test(Set<String> expected, String input) {

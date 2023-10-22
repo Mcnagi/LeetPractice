@@ -3,7 +3,6 @@ package problems.Q0001_Q0030;
 import java.util.Arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import problems.Q0001_Q0030.Q0016ThreeSumClosest;
 
 public class Q0016Test {
 

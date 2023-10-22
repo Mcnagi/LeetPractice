@@ -3,7 +3,6 @@ package problems.Q0001_Q0030;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import problems.Q0001_Q0030.Q0020ValidParentheses;
 
 public class Q0020Test {
 

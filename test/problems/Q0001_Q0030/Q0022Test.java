@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import problems.Q0001_Q0030.Q0022GenerateParentheses;
 
 public class Q0022Test {
   public void test(Set<String> expected, int input) {

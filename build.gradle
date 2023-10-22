@@ -14,7 +14,7 @@ java {
 
 spotless {
     java {
-        target 'src/problems/*.java','src/problems/**/*.java', 'test/problems/*.java'
+        target 'src/problems/*.java','src/problems/**/*.java', 'test/problems/**/*.java'
         googleJavaFormat()
     }
 }
