@@ -3,6 +3,7 @@ package problems;
 import java.util.Arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.Q0061_Q0090.Q0084LargestRectangleInHistogram;
 
 public class Q0084Test {
 

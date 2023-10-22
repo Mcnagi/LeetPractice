@@ -1,4 +1,4 @@
-package problems;
+package problems.Q0061_Q0090;
 
 public class Q0080RemoveDuplicatesSortedArrayII {
   public int removeDuplicates(int[] nums) {

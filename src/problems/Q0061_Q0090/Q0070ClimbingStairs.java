@@ -1,4 +1,4 @@
-package problems;
+package problems.Q0061_Q0090;
 
 public class Q0070ClimbingStairs {
   static int[] results = new int[46];

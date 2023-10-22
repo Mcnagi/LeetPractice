@@ -1,4 +1,6 @@
-package problems;
+package problems.Q0061_Q0090;
+
+import problems.ListNode;
 
 public class Q0061RotateList {
   public ListNode rotateRight(ListNode head, int k) {

@@ -1,4 +1,4 @@
-package problems;
+package problems.Q0061_Q0090;
 
 public class Q0066PlusOne {
   public int[] plusOne(int[] digits) {

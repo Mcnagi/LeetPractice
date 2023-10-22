@@ -1,4 +1,4 @@
-package problems;
+package problems.Q0061_Q0090;
 
 public class Q0088MergeSortedArray {
   public void merge(int[] nums1, int m, int[] nums2, int n) {
