@@ -7,7 +7,7 @@ public class Q0041FirstMissingPositive {
       if (value > 0 && value <= nums.length) exists[value - 1] = true;
     }
     int i = 0;
-    for (; i < exists.length; i ++) {
+    for (; i < exists.length; i++) {
       if (!exists[i]) return i + 1;
     }
     return i + 1;
