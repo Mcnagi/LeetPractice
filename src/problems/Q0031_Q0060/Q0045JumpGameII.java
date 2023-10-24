@@ -17,9 +17,4 @@ public class Q0045JumpGameII {
     }
     return dp[0];
   }
-
-  public static void main(String[] args) {
-    var q = new Q0045JumpGameII();
-    System.out.println(q.jump(new int[]{2, 3, 0, 1, 4}));
-  }
 }
