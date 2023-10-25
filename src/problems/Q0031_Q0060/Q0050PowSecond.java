@@ -17,10 +17,4 @@ public class Q0050PowSecond {
     return x * powerHelper(x * x, n / 2);
   }
 
-  public static void main(String[] args) {
-    var q = new Q0050PowSecond();
-    System.out.println(q.myPow(8.84372, -5));
-    System.out.println(q.myPow(2, 5));
-    System.out.println(q.myPow(2, 10));
-  }
 }
