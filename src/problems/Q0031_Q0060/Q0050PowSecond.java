@@ -16,5 +16,4 @@ public class Q0050PowSecond {
     if (n % 2 == 0) return powerHelper(x * x, n / 2);
     return x * powerHelper(x * x, n / 2);
   }
-
 }
