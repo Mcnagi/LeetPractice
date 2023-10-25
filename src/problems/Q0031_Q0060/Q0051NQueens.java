@@ -67,4 +67,11 @@ public class Q0051NQueens {
     }
     return false;
   }
+
+  public static void main(String[] args) {
+    var q = new Q0051NQueens();
+    for (int i = 1; i < 10; i++) {
+      System.out.println(q.solveNQueens(i).size());
+    }
+  }
 }
