@@ -1,4 +1,4 @@
-package problems;
+package problems.q0031_q0060;
 
 import java.util.Arrays;
 import org.junit.jupiter.api.Assertions;
