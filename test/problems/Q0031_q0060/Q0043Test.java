@@ -1,4 +1,4 @@
-package problems.q0031_q0060;
+package problems.Q0031_q0060;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
