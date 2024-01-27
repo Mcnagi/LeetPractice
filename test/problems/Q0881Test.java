@@ -3,6 +3,7 @@ package problems;
 import java.util.Arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.other.Q0881BoatsToSavePeople;
 
 public class Q0881Test {
   public void test(int expected, int[] array, int limit) {

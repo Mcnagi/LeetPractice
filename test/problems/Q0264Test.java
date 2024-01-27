@@ -2,6 +2,7 @@ package problems;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.other.Q0264UglyNumberII;
 
 public class Q0264Test {
   public void test(int expected, int input) {

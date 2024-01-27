@@ -6,11 +6,12 @@ import java.io.IOException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import problems.other.Q0303RangeSumQueryImmutable;
 
 public class Q0303Test {
 
   public void test(
-      int expected, Q0303RangeSumQueryImmutable.NumArray numArray, int left, int right) {
+          int expected, Q0303RangeSumQueryImmutable.NumArray numArray, int left, int right) {
     //        var q = new Q0303RangeSumQueryImmutable(array);
     //        var actual = q.numArray.sumRange()
     var actual = numArray.sumRange(left, right);

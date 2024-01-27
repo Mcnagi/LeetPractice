@@ -3,6 +3,7 @@ package problems;
 import java.util.Random;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.other.Q0205IsomorphicStrings;
 
 //    1 <= s.length <= 5 * 104
 //            t.length == s.length

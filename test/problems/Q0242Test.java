@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.other.Q0242ValidAnagram;
 
 public class Q0242Test {
   public void testTrue(String s, String t) {

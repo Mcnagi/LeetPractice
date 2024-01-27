@@ -3,6 +3,7 @@ package problems;
 import java.util.Arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.other.Q0605CanPlaceFlowers;
 
 public class Q0605Test {
   public void testTrue(int[] array, int n) {

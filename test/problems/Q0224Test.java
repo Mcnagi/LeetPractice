@@ -2,6 +2,7 @@ package problems;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.other.Q0224BasicCalculator;
 
 public class Q0224Test {
   public void test(int expected, String input) {

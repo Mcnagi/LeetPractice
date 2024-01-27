@@ -2,6 +2,7 @@ package problems;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.other.Q0394DecodeString;
 
 public class Q0394Test {
   public void test(String expected, String input) {

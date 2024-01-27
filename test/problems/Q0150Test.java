@@ -2,6 +2,7 @@ package problems;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.other.Q0150EvaluateReversePolishNotation;
 
 public class Q0150Test {
 

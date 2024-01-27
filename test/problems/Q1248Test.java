@@ -3,6 +3,7 @@ package problems;
 import java.util.Arrays;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.other.Q1248NiceSubarrays;
 
 public class Q1248Test {
   public void test(int expected, int[] array, int k) {

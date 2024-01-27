@@ -2,6 +2,7 @@ package problems;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.other.Q0402RemoveKDigits;
 
 public class Q0402Test {
   public void test(String expected, String s, int k) {

@@ -3,6 +3,7 @@ package problems;
 import java.util.List;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import problems.other.Q0229MajorityElementII;
 
 public class Q0229Test {
   public void test(List<Integer> expected, int[] input) {
